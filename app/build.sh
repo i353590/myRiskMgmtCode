@@ -1,9 +1,12 @@
 #!/bin/bash
+
 set -e
+
 cd "$(dirname "$0")"
+
 rm -rf dist
 mkdir dist
-cp launchpage.html dist
+
 for APP in *; do
     if [ -f "$APP/webapp/manifest.json" ]; then
         echo "Build $APP"
@@ -11,7 +14,7 @@ for APP in *; do
         if [ ! -f "package.json" ]; then
             npm init --yes
         fi
-        npm install
+        npm install 
         npm install --save-dev @ui5/cli
         if [ ! -f "ui5.yaml" ]; then
             cat >ui5.yaml <<EOF
@@ -21,7 +24,10 @@ metadata:
   name: $APP
 EOF
         fi
-        npx ui5 build --dest "../dist/$APP/webapp"
-        cd ..
+        npx ui5 build --dest "../dist/$APP"
+        cd "../dist/$APP"
+        cp "../../$APP/webapp/xs-app.json" "./"
+        zip -r -o manifest-bundle.zip manifest.json i18n
+        cd "../.."
     fi
 done
