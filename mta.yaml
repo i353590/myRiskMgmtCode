@@ -65,6 +65,8 @@ modules:
     - name: cpapp-destination
     - name: cpapp-logs
     - name: cpapp-connectivity
+    - name: cpapp-cs
+    - name: cpappems
    provides:
     - name: srv-api      # required by consumers of CAP services (e.g. approuter)
       properties:
@@ -180,4 +182,11 @@ resources:
    parameters:
      service: connectivity
      service-plan: lite
+   type: org.cloudfoundry.managed-service
+
+ - name: cpappems
+   parameters:
+    path: ./em.json
+    service: enterprise-messaging
+    service-plan: default
    type: org.cloudfoundry.managed-service

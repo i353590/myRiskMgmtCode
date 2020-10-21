@@ -1,6 +1,6 @@
 {
-	"name": "mitigations",
-	"version": "",
+	"name": "risks",
+	"version": "1.0.0",
 	"buildTimestamp": "202010201302",
 	"scmRevision": "",
 	"libraries": []

@@ -19,13 +19,19 @@ using { managed } from '@sap/cds/common';
     timeline     : String;
     risks        : Association to many Risks on risks.miti = $self;
   }
-  
-
-  // using an external service from S/4HANA Cloud
-  using {  API_BUSINESS_PARTNER as external } from '../srv/external/API_BUSINESS_PARTNER.csn';
-
-  entity BusinessPartners as projection on external.A_BusinessPartner {
-    key BusinessPartner,
-    LastName,
-    FirstName
+  entity BusinessPartners : managed {
+   key ID: UUID @(Core.Computed : true);
+    BusinessPartnerID: String @readonly;
+    LastName: String;
+    FirstName: String;
+    Status: String;
+    risks: Composition of many Risks on risks.bp = $self;
   }
+  // using an external service from S/4HANA Cloud
+//   using {  API_BUSINESS_PARTNER as external } from '../srv/external/API_BUSINESS_PARTNER.csn';
+
+//   entity BusinessPartners as projection on external.A_BusinessPartner {
+//     key BusinessPartner,
+//     LastName,
+//     FirstName
+//   }

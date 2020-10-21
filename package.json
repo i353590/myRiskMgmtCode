@@ -11,7 +11,8 @@
     "@sap/xssec": "^3.0.10",
     "express": "^4",
     "hdb": "^0.18.1",
-    "passport": "^0.4.1"
+    "passport": "^0.4.1",
+    "@sap/xb-msg-amqp-v100": "^0.9.39"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.78.10",
@@ -21,7 +22,8 @@
     "start": "npx cds run"
   },
   "sapux": [
-    "app/risks"
+    "app/risks",
+    "app/notifications"
   ],
   "cds": {
     "requires": {
@@ -31,6 +33,11 @@
       "uaa": {
         "kind": "xsuaa",
         "credentials": {}
+      },
+      "[production]":{
+        "messaging": {
+          "kind": "enterprise-messaging"
+        }
       },
       "API_BUSINESS_PARTNER": {
         "kind": "odata",
