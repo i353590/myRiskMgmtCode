@@ -41,14 +41,14 @@ module.exports = async (srv) => {
         return next();
     });
 
-    const BupaService = await cds.connect.to('API_BUSINESS_PARTNER');
-    srv.on('READ', srv.entities.BusinessPartners, async (req) => {
-        const res = await BupaService.tx(req).run(req.query.redirectTo(BupaService.entities.A_BusinessPartner))
-    //    const res = await BupaService.tx(req).run(
-    //     req.query.redirectTo(
-    //     srv.model.definitions["sap.ui.riskmanagement.BusinessPartners"]
-    //     )     
-    //     ); 
-       return res;
-    });
+    // const BupaService = await cds.connect.to('API_BUSINESS_PARTNER');
+    // srv.on('READ', srv.entities.BusinessPartners, async (req) => {
+    //     const res = await BupaService.tx(req).run(req.query.redirectTo(BupaService.entities.A_BusinessPartner))
+    // //    const res = await BupaService.tx(req).run(
+    // //     req.query.redirectTo(
+    // //     srv.model.definitions["sap.ui.riskmanagement.BusinessPartners"]
+    // //     )     
+    // //     ); 
+    //    return res;
+    // });
 }

@@ -23,7 +23,7 @@
   },
   "sapux": [
     "app/risks",
-    "app/notifications"
+    "app/notification"
   ],
   "cds": {
     "requires": {
