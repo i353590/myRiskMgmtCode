@@ -1,6 +1,6 @@
 {
-	"name": "risks",
-	"version": "1.0.0",
+	"name": "notification",
+	"version": "0.0.1",
 	"buildTimestamp": "202010220822",
 	"scmRevision": "",
 	"libraries": []

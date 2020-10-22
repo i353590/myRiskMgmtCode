@@ -184,6 +184,12 @@ resources:
      service-plan: lite
    type: org.cloudfoundry.managed-service
 
+ - name: cpapp-cs
+   parameters:
+     service: connectivity
+     service-plan: lite
+   type: org.cloudfoundry.managed-service
+
  - name: cpappems
    parameters:
     path: ./em.json
