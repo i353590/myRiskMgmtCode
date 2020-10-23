@@ -1,4 +1,0 @@
-ID;createdAt;createdBy;title;prio;descr;miti_id;impact;bp_ID
-20466922-7d57-4e76-b14c-e53fd97dcb11;2019-10-24;tim.back@sap.com;CFR non-compliance ;3;Recent restructuring might violate CFR code 71;20466921-7d57-4e76-b14c-e53fd97dcb11;10000;b064ee79-e79c-4429-a29e-d31914fdd522
-20466922-7d57-4e76-b14c-e53fd97dcb12;2019-10-24;tim.back@sap.com;SLA violation with possible termination cause;2;Repeated SAL violation on service delivery for two successive quarters;20466921-7d57-4e76-b14c-e53fd97dcb12;90000;c46c1dec-c5b1-4ea7-9887-36e1781c3ef1
-20466922-7d57-4e76-b14c-e53fd97dcb13;2019-10-24;tim.back@sap.com;Shipment violating export control;1;Violation of export and trade control with unauthorized downloads;20466921-7d57-4e76-b14c-e53fd97dcb13;200000;321ca9ab-814d-46b2-94bb-187f07067ea0

@@ -1,1 +1,0 @@
-sap.ui.define(["sap/fe/core/AppComponent"],function(n){"use strict";return n.extend("ns.notification.Component",{metadata:{manifest:"json"}})});
