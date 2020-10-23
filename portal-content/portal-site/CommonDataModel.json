@@ -34,7 +34,11 @@
 					"id": "ns.mitigations.display",
 					"appId": "ns.mitigations",
 					"vizId": "Mitigations-display"
-				}]
+                }, {
+                    "id": "ns.notification.display",
+                    "appId": "ns.notification",
+                    "vizId": "Notification-display"
+                    }]
 			}
 		}],
 		"sites": [{

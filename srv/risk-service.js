@@ -2,6 +2,7 @@
  * Implementation for Risk Management service defined in ./risk-service.cds
  */
 module.exports = async (srv) => {
+    const messaging = await cds.connect.to('messaging');
     const bupaSrv = await cds.connect.to("API_BUSINESS_PARTNER"),
      { A_BusinessPartner: userInfo } = bupaSrv.entities,
      {BusinessPartners} = srv.entities
